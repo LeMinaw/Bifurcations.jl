@@ -1,6 +1,6 @@
 __precompile__()
 
-type Population
+struct Population
     law::Function
     fertilities::Array{Function, 1}
     initial::Float64

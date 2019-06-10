@@ -1,5 +1,5 @@
-"Simple start-end gradient structure."""
-type Gradient{T<:Colorant}
+"Simple start-end gradient structure."
+struct Gradient{T<:Colorant}
     start::T
     stop::T
 end

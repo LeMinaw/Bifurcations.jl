@@ -3,7 +3,6 @@ __precompile__()
 module Bifurcations
 
     using FileIO, Images, Formatting
-    using Populations
 
     include("utils.jl")
     include("populations.jl")
@@ -38,7 +37,7 @@ module Bifurcations
             old_values = Set{Float64}()
             for n = 1:iters
                 # Detects cyclical behaviour
-                approx_p::Float64 = trunc(p, 10)
+                approx_p::Float64 = round(p, digits=10)
                 if in(approx_p, old_values)
                     break
                 end
