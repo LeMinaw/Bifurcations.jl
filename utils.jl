@@ -6,7 +6,7 @@ function interp(x::Real,
 end
 
 "Constant function"
-function cst(k::Real)
+function cst(k::Number)
     return f(args...) = k
 end
 

@@ -1,9 +1,11 @@
 __precompile__()
 
-type Population
+struct Population
     law::Function
     fertilities::Array{Function, 1}
     initial::Float64
 end
 
-logistic(f::Float64, p::Float64) = f * p * (1-p)
+logistic(f::Number, p::Number) = f * p * (1-p)
+
+mandelbrot(f::Number, p::Number) = f + p^2
